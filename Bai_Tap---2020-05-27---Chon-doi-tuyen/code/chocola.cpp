@@ -3,12 +3,9 @@ using namespace std;
 
 const int maxN = 100005;
 int n, m;
-// vector<int> indexType[300];
 
 int maxCount(vector<int> index) {
-  // vector<int> index = indexType[type];
   int res = 0;
-
   int i, j;
   for (i = 0, j = 0; max(i, j) < (int)index.size()-1; i++) {
     while(j < (int)index.size()-1 && (index[j+1]-index[i]) - (j+1 - i) <= m)
@@ -31,9 +28,7 @@ void solve() {
   int res = 0;
   for (int i = 0; i < 26; i++) {
     res = max(res, maxCount(indexType[(char)'A'+i]));
-    // indexType['A'+i].clear();
     res = max(res, maxCount(indexType[(char)'a'+i]));
-    // indexType['A'+i].clear();
   }
 
   cout << res << '\n';
@@ -41,7 +36,7 @@ void solve() {
 
 int main() {
   freopen("chocola.inp", "r", stdin);
-  // freopen("chocola.out", "w", stdout);
+  freopen("chocola.out", "w", stdout);
 
   int t; cin >> t;
   while(t--)
