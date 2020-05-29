@@ -31,7 +31,7 @@ void solve() {
     res = max(res, maxCount(indexType[(char)'a'+i]));
   }
 
-  cout << res << '\n';
+  cout << min(res, n) << '\n';
 }
 
 int main() {
