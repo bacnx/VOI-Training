@@ -22,14 +22,14 @@ int main() {
 
   for (int iTest = 1; iTest <= 100; iTest++) {
     ofstream inp((NAME + ".inp").c_str());
-      int n = Rand(1, 10), k = (Rand(1, n));
+      int n = Rand(1, 100), k = (Rand(1, n));
       inp << n << " " << k << '\n';
       for (int i = 1; i <= n; i++)
         inp << Rand(1, 10) << ' ';
     inp.close();
 
-    system(("./" + NAME).c_str());
     system(("./" + NAME + "_trau").c_str());
+    system(("./" + NAME).c_str());
     
     if (system(("diff " + NAME + ".out " + NAME + ".ans").c_str()) != 0) {
       cout << "Test " << iTest << ": WRONG!\n";
