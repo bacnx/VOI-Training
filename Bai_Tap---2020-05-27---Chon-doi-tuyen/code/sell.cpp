@@ -50,9 +50,10 @@ int32_t main() {
       r = i;
     }
   }
-  
+  // cout << (int)(res * 1000000);
   cout << fixed << setprecision(6) << res;
   // printf("%f", res);
+  // cout << (int)(res * 1000000) / 1000000 << '.' << (int)(res * 1000000) % 1000000;
 
   return 0;
 }
