@@ -1,18 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const string NAME = "sell";
+const string NAME = "center";
 
 long long Rand(long long l, long long r) {
   return l + (long long)rand() * (long long)rand() % (r - l + 1);
 }
-// long long Rand(long long l, long long h)
-// {
-//     return l + ((long long)rand() * (RAND_MAX + 1) * (RAND_MAX + 1) * (RAND_MAX + 1) +
-//                 (long long)rand() * (RAND_MAX + 1) * (RAND_MAX + 1) +
-//                 (long long)rand() * (RAND_MAX + 1) +
-//                 rand()) % (h - l + 1);
-// }
 
 int main() {
   srand(time(NULL));
@@ -22,10 +15,16 @@ int main() {
 
   for (int iTest = 1; iTest <= 100; iTest++) {
     ofstream inp((NAME + ".inp").c_str());
-      int n = Rand(1, 100), k = (Rand(1, n));
-      inp << n << " " << k << '\n';
+      int n = Rand(1, 1000), m = (Rand(1, 1000));
+      inp << n << " " << m << '\n';
       for (int i = 1; i <= n; i++)
-        inp << Rand(1, 10) << ' ';
+        inp << Rand(1, 1000) << ' ';
+      inp << '\n';
+      for (int i = 1; i <= n; i++)
+        inp << Rand(1, 1000) << ' ';
+      inp << '\n';
+      for (int i = 1; i <= m; i++)
+        inp << Rand(1, 1000) << '\n';
     inp.close();
 
     system(("./" + NAME + "_trau").c_str());
