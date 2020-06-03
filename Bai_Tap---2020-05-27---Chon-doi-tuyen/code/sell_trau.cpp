@@ -22,7 +22,8 @@ int main() {
     }
   }
 
-  cout << fixed << setprecision(6) << res;
+  // cout << fixed << setprecision(6) << res;
+  cout << (int)(res * 1000000) / 1000000 << '.' << (int)(res * 1000000) % 1000000;
 
   return 0;
 }
