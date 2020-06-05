@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int s, n, a[102], sumS[102][3003];
+int s, n, a[102], sumS[102][20004];
 
 void initSumS() {
   for (int i = 1; i <= 2*s; i++)
