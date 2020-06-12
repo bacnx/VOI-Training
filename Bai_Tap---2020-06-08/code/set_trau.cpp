@@ -50,7 +50,7 @@ void solve() {
 
 int main() {
   freopen("set.inp", "r", stdin);
-  freopen("set.out", "w", stdout);
+  freopen("set.ans", "w", stdout);
 
   int t; cin >> t;
   while (t--)
