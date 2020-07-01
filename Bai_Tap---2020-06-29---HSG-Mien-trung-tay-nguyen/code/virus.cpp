@@ -11,6 +11,7 @@ bool q[maxN][maxN];
 bool virus[maxN][maxN];
 int result[maxN];
 vector<pii> v1, v2;
+int tMax;
 
 void danhDau(int u, int v, int x, int y) {
   for (int i = u; i <= x; i++)
@@ -23,19 +24,22 @@ void solve(int u, int v) {
   int t = 0;
   while (!v1.empty()) {
     t++; result[t] = result[t-1];
-// cout << '*';
     while (!v1.empty()) {
       int u = v1.front().first, v = v1.front().second; v1.erase(v1.begin());
-      if (u < 1 || u > n || v < 1 || v > m) continue;
-// cout << u << ' ' << v << endl;
+      if (u < 1 || u > n || v < 1 || v > m || virus[u][v]) continue;
+
       virus[u][v] = true;
       if (q[u][v]) result[t]++;
 
-      for (int i = 0; i < 8; i++)
-        v2.push_back(pii(u + cX[i], v + cY[i]));
+      for (int i = 0; i < 8; i++) {
+        int uN = u + cX[i], vN = v + cY[i];
+        if (uN < 1 || uN > n || vN < 1 || vN > m || virus[uN][vN]) continue;
+        v2.push_back(pii(uN, vN));
+      }
     }
     swap(v1, v2);
   }
+  tMax = t - 1;
 }
 
 void test() {
@@ -49,7 +53,8 @@ void test() {
 
 int main() {
   freopen("input", "r", stdin);
-
+  ios_base::sync_with_stdio(0); // insert
+  cin.tie(0); // insert
   cin >> n >> m >> k;
   int u, v; cin >> u >> v;
 
@@ -59,7 +64,13 @@ int main() {
   }
 
   solve(u, v);
-  // cout << result[2];
+  
+  int q; cin >> q;
+  while (q--) {
+    int t; cin >> t;
+    if (t > tMax) cout << result[tMax+1] << ' ';
+    else cout << result[t+1] << ' ';
+  }
 
   return 0;
 }
