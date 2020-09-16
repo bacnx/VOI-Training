@@ -2,14 +2,34 @@
 using namespace std;
 
 int main() {
-  bitset<16> bs = 30;
-  cout << bs << '\n';
+  freopen("mult17.inp", "r", stdin);
+  freopen("mult17.out", "w", stdout);
 
-  bitset<16> bs1 = 17;
-  cout << bs1 << '\n';
+  string s; cin >> s;
+  string ans = s + "0000";
+  s = "0000" + s;
+  
+  char n = '0';
+  int a = 0, b = 0, c = 0;
+  for (int i = ans.size()-1; i != 0; i--) {
+    a = s[i] - '0';
+    b = ans[i] - '0';
+    c = n - '0';
+    
+    if (a + b + c == 3) {
+      n = '1';
+      ans[i] = '1';
+    } else if (a + b + c == 2) {
+      n = '1';
+      ans[i] = '0';
+    } else {
+      n = '0';
+      ans[i] = a + b + c + '0';
+    }
+  }
+  if (n == '1') ans = "1" + ans;
 
-  bitset<16> bs17 = 30*17;
-  cout << bs17 << '\n';
+  cout << ans;
 
   return 0;
 }
