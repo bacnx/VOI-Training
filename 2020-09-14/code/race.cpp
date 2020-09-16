@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int32_t main() {
   freopen("race.inp", "r", stdin);
   freopen("race.out", "w", stdout);
 
@@ -11,7 +11,7 @@ int main() {
 
   int s1 = v1 * t1, s2 = v2 * t2;
   int T1 = (x-1)*s1 * t1*2, T2 = (x-1)*s2 * t2*2;
-  if (T1 + t1 > T2 + t2) {
+  if ((double)T1 + t1 > (double)T2 + t2) {
     cout << "First";
   } else if (T1 + t1 < T2 + t2) {
     cout << "Second";
