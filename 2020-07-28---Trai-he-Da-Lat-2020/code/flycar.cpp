@@ -6,6 +6,9 @@ int d[401];
 bool fre[401];
 
 int main() {
+  freopen("flycar.inp", "r", stdin);
+  freopen("flycar.out", "w", stdout);
+  
   cin >> n >> k;
   for (int i = 1; i <= n; i++) {
     cin >> a[i];
