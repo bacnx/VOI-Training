@@ -15,8 +15,8 @@ long long Rand(long long a, long long b) {
 int main() {
   srand(time(NULL));
 
-  // system(("g++ " + _name + ".cpp -o" + _name).c_str());
-  // system(("g++ " + _name + "_check.cpp -o" + _name + "_check").c_str());
+  system(("g++ " + _name + ".cpp -o" + _name).c_str());
+  system(("g++ " + _name + "_check.cpp -o" + _name + "_check").c_str());
 
   for (int iTest = 1; iTest <= nTest; iTest++) {
     ofstream inp((_name + ".inp").c_str());
