@@ -14,8 +14,8 @@ void Pop(int x) {
 }
 
 int main() {
-  // freopen("floodfill.inp", "r", stdin);
-  // freopen("floodfill.out", "w", stdout);
+  freopen("floodfill.inp", "r", stdin);
+  freopen("floodfill.out", "w", stdout);
 
   cin >> n;
 
