@@ -7,9 +7,16 @@ int n, K, h[401];
 vector<vector<int> >f(401, vector<int>(401, INT_MAX));
 int s[401], mxS[401];
 
+int mxH(int a, int b) {
+  int ans = 0;
+  for (int i = a; i <= b; i++)
+    ans = max(ans, h[i]);
+  return ans;
+}
+
 int32_t main() {
   freopen("flycar.inp", "r", stdin);
-  freopen("flycar.out", "w", stdout);
+  freopen("flycar.ans", "w", stdout);
 
   cin >> n >> K;
   for (int i = 1; i <= n; i++)
@@ -21,7 +28,7 @@ int32_t main() {
     s[i] = s[i+1] + h[i];
   }
 
-  for (int k = 0; k < K; k++)
+  for (int k = 0; k <= K; k++)
     f[0][k] = 0;
   int mxTemp = 0;
   for (int i = 1; i < n; i++) {
@@ -31,11 +38,12 @@ int32_t main() {
 
   for (int i = 1; i <= n; i++) {
     for (int k = 1; k <= K; k++) {
-      for (int j = 0; j < i; j++)
-        f[i][k] = min(f[i][k], f[j][k-1] + mxS[j+1]*(i-j) - (s[j+1] - s[i+1]));
+      for (int j = 0; j < i; j++) {
+        f[i][k] = min(f[i][k], f[j][k-1] + mxH(j+1, i)*(i-j) - (s[j+1] - s[i+1]));
+      }
     }
   }
-
+  
   cout << f[n][K];
 
   return 0;

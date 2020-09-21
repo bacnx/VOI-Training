@@ -4,7 +4,7 @@ using namespace std;
 const string _name = "flycar";
 const int nTest = 100;
 
-const int nMax = 3;
+const int nMax = 10;
 const int aMax = 10;
 
 long long Rand(long long a, long long b) {
