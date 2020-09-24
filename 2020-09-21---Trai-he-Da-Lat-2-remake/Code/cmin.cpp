@@ -30,14 +30,14 @@ int binaryFind(double a) {
 int32_t main() {
   ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
 
-  freopen("cmax.inp", "r", stdin);
-  freopen("cmax.out", "w", stdout);
+  freopen("cmin.inp", "r", stdin);
+  freopen("cmin.out", "w", stdout);
 
   cin >> n;
   for (int i = 1; i <= n; i++)
     cin >> a[i].first >> a[i].second;
 
-  sort(a + 1, a + n + 1);
+  sort(a + 1, a + n + 1, greater<pii>());
 
   for (int i = 1; i <= n; i++) {
     while (!vt.empty() && vt.back().first == a[i].first)
