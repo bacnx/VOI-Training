@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    freopen("eoe.inp", "r", stdin);
+    freopen("eoe.out", "w", stdout);
     string s; cin >> s;
 
     int x, y; {
