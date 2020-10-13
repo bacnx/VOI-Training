@@ -1,0 +1,1082 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- saved from url=(0063)https://codeforces.com/group/8uwwWH0E98/contest/298810/problems -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="X-Csrf-Token" content="b3a102e86b61108ed3dea566818a4737">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01">
+
+    <script src="./Problems - Codeforces_files/sdk.js" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="./Problems - Codeforces_files/ga.js"></script><script id="facebook-jssdk" src="./Problems - Codeforces_files/sdk(1).js"></script><script type="text/javascript" src="./Problems - Codeforces_files/jquery-1.8.3.js"></script>
+    <script type="application/javascript">
+        window.standaloneContest = false;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+
+        /* Protection against trailing dot in domain. */
+        let hostLength = window.location.host.length;
+        if (hostLength > 1 && window.location.host[hostLength - 1] === '.') {
+            window.location = window.location.protocol + "//" + window.location.host.substring(0, hostLength - 1);
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="h2">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90">
+    <meta property="fb:admins" content="100001352546622">
+    <meta property="og:image" content="//sta.codeforces.com/s/62405/images/codeforces-telegram-square.png">
+    <link rel="image_src" href="https://sta.codeforces.com/s/62405/images/codeforces-telegram-square.png">
+    <meta property="og:title" content="Problems - Codeforces">
+    <meta property="og:description" content="">
+    
+    <meta property="og:site_name" content="Codeforces">
+    
+    
+    
+    
+    
+    
+    <meta name="utc_offset" content="+03:00">
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2">
+    <title>Problems - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community">
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="./Problems - Codeforces_files/font-awesome.min.css" type="text/css" charset="utf-8">
+
+        <link href="./Problems - Codeforces_files/css" rel="stylesheet" type="text/css">
+        <link href="./Problems - Codeforces_files/css(1)" rel="stylesheet" type="text/css">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://sta.codeforces.com/s/62405/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://sta.codeforces.com/s/62405/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://sta.codeforces.com/s/62405/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://sta.codeforces.com/s/62405/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://sta.codeforces.com/s/62405/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://sta.codeforces.com/s/62405/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://sta.codeforces.com/s/62405/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://sta.codeforces.com/s/62405/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sta.codeforces.com/s/62405/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://sta.codeforces.com/s/62405/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sta.codeforces.com/s/62405/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://sta.codeforces.com/s/62405/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sta.codeforces.com/s/62405/favicon-16x16.png">
+    <link rel="manifest" href="https://sta.codeforces.com/s/62405/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="//sta.codeforces.com/s/62405/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="./Problems - Codeforces_files/prettify.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/clear.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/style.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/ttypography.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/problem-statement.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/second-level-menu.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/roundbox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/datatable.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/table-form.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/topic.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/jquery.jgrowl.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/facebox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/jquery.wysiwyg.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/jquery.autocomplete.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/codeforces.datepick.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/colorbox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/jquery.drafts.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Problems - Codeforces_files/community.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Problems - Codeforces_files/groups.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Problems - Codeforces_files/sidebar-menu.css" type="text/css" charset="utf-8">
+
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+    });
+    MathJax.Hub.Register.StartupHook("End", function () {
+        Codeforces.runMathJaxListeners();
+    });
+    </script>
+    <script type="text/javascript" async="" src="./Problems - Codeforces_files/MathJax.js">
+    </script>
+    <!-- /MathJax -->
+
+    <script type="text/javascript" src="./Problems - Codeforces_files/prettify.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/pushstream.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.swipe.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/facebox.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/wysiwyg.colorpicker.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/wysiwyg.table.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/ua-parser.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.datepick.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.ie6blocker.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.drafts.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/clipboard.min.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/autosize.min.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/sjcl.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/codeforces-options.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/codeforces.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/EventCatcher.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/preparedVerdictFormats-en.js"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="./Problems - Codeforces_files/style(1).css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/style(2).css" type="text/css" charset="utf-8">
+
+
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.markitup.js"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none; box-sizing: content-box}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.MathJax_test.mjx-test-display {display: table!important}
+.MathJax_test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.MathJax_test.mjx-test-default {display: block!important; clear: both}
+.MathJax_ex_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.MathJax_em_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60em}
+.mjx-test-inline .MathJax_left_box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .MathJax_right_box {display: inline-block; width: 0; float: right}
+.mjx-test-display .MathJax_right_box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class=" "><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div><span style="display:none;" class="csrf-token" data-csrf="b3a102e86b61108ed3dea566818a4737">&nbsp;</span>
+<!-- .notificationTextCleaner used in Codeforces.showAnnouncements() -->
+<div class="notificationTextCleaner" style="font-size: 0px"></div>
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+<div class="verdictPrototypeDiv" style="display: none;"></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        var hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+    };
+
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile == "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+
+
+
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '554666954583323',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 700
+        });
+    }, 100);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+        var count = 0;
+
+        function getDelay() {
+            var delay = 0;
+            var last = Codeforces.getFromStorage("LastOnlineTimeUpdaterMillis", 0);
+            if (last && last != null) {
+                var period = count < 20 ? 180 * 1000 : 360 * 1000;
+                delay = period - (new Date().getTime() - last);
+                if (delay < 0)
+                    delay = 0;
+            }
+            return delay;
+        }
+
+        window.setInterval(function () {
+            if (getDelay() <= 0 && count < 120) {
+                ++count;
+                Codeforces.ping("/data/update-online");
+            }
+        }, 5000);
+
+        var handle = "I_love_tigersugar";
+        $("a.rated-user:contains(" + handle + "), span.participant:contains(" + handle + ")").each(function () {
+            if ($(this).text() == handle) {
+                var td = $(this).parent();
+                var tr = $(this).parent().parent();
+                if (td.is("td") && tr.is("tr")) {
+                    tr.addClass("highlighted-row");
+                }
+            }
+        });
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "en");
+        }, Math.random() * 500);
+    }
+
+    function showEventCatcherUserMessage(json) {
+        if (json.t == "s") {
+            var points = json.d[5];
+            var passedTestCount = json.d[7];
+            var judgedTestCount = json.d[8];
+            var verdict = preparedVerdictFormats[json.d[12]];
+            var verdictPrototypeDiv = $(".verdictPrototypeDiv");
+            verdictPrototypeDiv.html(verdict);
+            if (judgedTestCount != null && judgedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-judged").text(judgedTestCount);
+            }
+            if (passedTestCount != null && passedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-passed").text(passedTestCount);
+            }
+            if (points != null && points != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-points").text(points);
+            }
+            Codeforces.showMessage(verdictPrototypeDiv.text());
+        }
+    }
+
+    $(".clickable-title").each(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            var tmp = document.createElement("DIV");
+            tmp.innerHTML = title;
+            $(this).attr("title", tmp.textContent || tmp.innerText || "");
+        }
+    });
+
+    $(".clickable-title").click(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            Codeforces.alert(title);
+        } else {
+            Codeforces.alert($(this).attr("title"));
+        }
+    }).css("position", "relative").css("bottom", "3px");
+
+        Codeforces.showDelayedMessage();
+
+    Codeforces.reformatTimes();
+
+    //Codeforces.initializePubSub();
+    if (window.codeforcesOptions.subscribeServerUrl) {
+        window.eventCatcher = new EventCatcher(
+            window.codeforcesOptions.subscribeServerUrl,
+            [
+                Codeforces.getGlobalChannel(),
+                Codeforces.getUserChannel(),
+                Codeforces.getUserShowMessageChannel(),
+                Codeforces.getContestChannel(),
+                Codeforces.getParticipantChannel(),
+                Codeforces.getTalkChannel()
+            ]
+        );
+
+        if (Codeforces.getParticipantChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getParticipantChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getContestChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getContestChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getGlobalChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getGlobalChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserShowMessageChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserShowMessageChannel(), function(json) {
+                showEventCatcherUserMessage(json);
+            });
+        }
+    }
+
+    Codeforces.setupContestTimes("/group/8uwwWH0E98/data/contests");
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="body">
+<div style="width: 950px; margin: 0 auto;" class="compact-problemset">
+    <div id="header" style="position: relative;">
+        <div style="float:left;">
+                  <a href="https://codeforces.com/"><img src="./Problems - Codeforces_files/codeforces-logo-with-telegram.png"></a>
+        </div>
+        <div class="lang">
+            <div style="text-align: right;">
+                <a href="https://codeforces.com/group/8uwwWH0E98/contest/298810/problems?locale=en"><img src="./Problems - Codeforces_files/gb.png" title="In English" alt="In English"></a>
+                <a href="https://codeforces.com/group/8uwwWH0E98/contest/298810/problems?locale=ru"><img src="./Problems - Codeforces_files/ru.png" title="По-русски" alt="По-русски"></a>
+            </div>
+        </div>
+        <br style="clear: both;">
+    </div>
+
+    <div style="text-align: center; font-size: 1.8rem; margin-bottom: 0.5em;" class="caption">2020 autumn training episode 34, round F10</div>
+    <div style="border-top: 1px solid #ccc; height: 1em;"></div>
+
+    <div class="problem-frames">
+        <div style="margin-bottom: 2em;">
+
+    <style>
+        #facebox .content:has(.diff-popup) {
+            width: 90vw;
+            max-width: 120rem !important;
+        }
+
+        .diff-popup {
+            width: 90vw;
+            max-width: 120rem !important;
+            display: none;
+            overflow: auto;
+        }
+
+        .input-output-copier {
+            font-size: 1.2rem;
+            float: right;
+            color: #888 !important;
+            cursor: pointer;
+            border: 1px solid rgb(185, 185, 185);
+            padding: 3px;
+            margin: 1px;
+            line-height: 1.1rem;
+            text-transform: none;
+        }
+
+        .input-output-copier:hover {
+            background-color: #def;
+        }
+
+        .test-explanation textarea {
+            width: 100%;
+            height: 1.5em;
+        }
+
+        .pending-submission-message {
+            color: darkorange !important;
+        }
+    </style>
+    <script>
+        const OPENING_SPACE = String.fromCharCode(1001);
+        const CLOSING_SPACE = String.fromCharCode(1002);
+
+        const nodeToText = function (node, pre) {
+            let result = [];
+
+            if (node.tagName === "SCRIPT" || node.tagName === "math"
+                || (node.classList && node.classList.contains("input-output-copier")))
+                return [];
+
+            if (node.tagName === "NOBR") {
+                result.push(OPENING_SPACE);
+            }
+
+            if (node.nodeType === Node.TEXT_NODE) {
+                let s = node.textContent;
+                if (!pre) {
+                    s = s.replace(/\s+/g, " ");
+                }
+                if (s.length > 0) {
+                    result.push(s);
+                }
+            }
+
+            if (pre && node.tagName === "BR") {
+                result.push("\n");
+            }
+
+            node.childNodes.forEach(function (child) {
+                result.push(nodeToText(child, node.tagName === "PRE").join(""));
+            });
+
+            if (node.tagName === "DIV"
+                || node.tagName === "P"
+                || node.tagName === "PRE"
+                || node.tagName === "UL"
+                || node.tagName === "LI"
+            ) {
+                result.push("\n");
+            }
+
+            if (node.tagName === "NOBR") {
+                result.push(CLOSING_SPACE);
+            }
+
+            return result;
+        }
+
+        const isSpecial = function (c) {
+            return c === ',' || c === '.' || c === ';' || c === ')' || c === ' ';
+        }
+
+        const convertStatementToText = function(statmentNode) {
+            const text = nodeToText(statmentNode, false).join("").replace(/ +/g, " ").replace(/\n\n+/g, "\n\n");
+            let result = [];
+            for (let i = 0; i < text.length; i++) {
+                const c = text.charAt(i);
+                if (c === OPENING_SPACE) {
+                    if (!((i > 0 && text.charAt(i - 1) === '(') || (result.length > 0 && result[result.length - 1] === ' '))) {
+                        result.push('+');
+                    }
+                } else if (c === CLOSING_SPACE) {
+                    if (!(i + 1 < text.length && isSpecial(text.charAt(i + 1)))) {
+                        result.push('-');
+                    }
+                } else {
+                    result.push(c);
+                }
+            }
+            return result.join("").split("\n").map(value => value.trim()).join("\n");
+        };
+    </script>
+    <div class="diff-popup">
+    </div>
+
+<div class="problemindexholder" problemindex="A" data-uuid="ps_589e5c53f51554463d982f53ffca7d5336e28ec7">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://codeforces.com/group/8uwwWH0E98/contest/298810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">A. Sáp nhập địa phương</div><div class="time-limit"><div class="property-title">time limit per test</div>0.25 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>16 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>merge.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>merge.out</div></div><div><p>Thực hiện chủ trương "tinh giản bộ máy, cắt giảm biên chế" của chính phủ, thời gian tới nhiều tỉnh thành sẽ sáp nhập với nhau, nhiều cơ quan ban, bộ, ngành cũng được ghép làm một. Điều này làm sẽ làm giảm số lượng ghế chủ tịch, phó chủ tịch, giám đốc, phó giám đốc; qua đó giảm chi phí tiền lương để nuôi bộ máy nhà nước và tiết kiệm ngân sách cho người dân.</p><p>Tuy nhiên, đặt tên địa phương, ban bộ thế nào sau khi sáp nhập là cả một vấn đề lớn. Những tên địa danh, tỉnh thành vốn mang tính lịch sử lâu đời, ăn sâu vào tiềm thức của người dân và gắn bó như một phần máu mủ ruột thịt. Bởi thế, sau khi sáp nhập, chính phủ muốn dùng những tiếng có trong tên cũ của các địa phương để ghép lại thành tên mới. Điều này vừa giữ lại phần nào bản sắc đặc trưng của địa phương, vừa thể hiện sự gắn kết bền chặt. Ví dụ, thành phố Hòa Bình và tỉnh Hà Tĩnh sẽ sáp nhập thành tỉnh "Bình Tĩnh", huyện đảo Côn Đảo và huyện Đồ Sơn sáp nhập lại thành huyện "Côn Đồ". Ba tỉnh Đắk Lắk, Kon Tum, Play Ku sẽ sáp nhập thành tỉnh "Lắk Kon Ku". Tương tự, bộ Nội Vụ và bộ Y Tế có thể sẽ sáp nhập thành bộ "Nội Y".</p><p>Cho biết tên của <span class="tex-span"><i>n</i></span> địa danh hoặc cơ quan chuẩn bị được sáp nhập với nhau, và số thứ tự của tiếng được lấy ra từ mỗi tên để tạo thành tên sau khi sáp nhập, hãy cho biết tên sau khi sáp nhập <span class="tex-span"><i>n</i></span> địa danh hoặc cơ quan này.</p></div><div class="input-specification"><div class="section-title">Input</div><ul> <li> Dòng đầu tiên chứa số nguyên <span class="tex-span"><i>n</i></span> <span class="tex-span">(1 ≤ <i>n</i> ≤ 100)</span>&nbsp;— số địa phương hoặc cơ quan được tiến hành sáp nhập. </li><li> <span class="tex-span"><i>n</i></span> dòng tiếp theo, mỗi dòng ghi tên của một địa phương kèm theo một số nguyên dương là chỉ số của tiếng trong tên sẽ được dùng vào tên sáp nhập. Số nguyên dương này được đảm bảo không lớn hơn số tiếng của tên gọi. Mỗi tên gọi gồm không quá <span class="tex-span">100</span> tiếng, mỗi tiếng gồm không quá <span class="tex-span">7</span> ký tự in thường. </li></ul></div><div class="output-specification"><div class="section-title">Output</div><p>Gồm một dòng duy nhất chứa tên sau khi sáp nhập <span class="tex-span"><i>n</i></span> cơ quan, tổ chức hay địa phương nói trên.</p></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id001417637027414811" id="id007241053429161262" class="input-output-copier">Copy</div></div><pre id="id001417637027414811">2
+noi vu 1
+y te 1
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id0028804371723005984" id="id0005810058034712662" class="input-output-copier">Copy</div></div><pre id="id0028804371723005984">noi y 
+</pre></div><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id0018707292178935964" id="id008928184237811378" class="input-output-copier">Copy</div></div><pre id="id0018707292178935964">3
+dak lak 2
+kon tum 1
+play ku 2
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id00057337614602981146" id="id002604276726652035" class="input-output-copier">Copy</div></div><pre id="id00057337614602981146">lak kon ku 
+</pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.changedTests = new Set();
+        console.log("Initialized window.changedTests.");
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+        String.prototype.replaceAll = function (search, replace) {
+            return this.split(search).join(replace);
+        };
+
+        $(".sample-test .title").each(function () {
+            var preId = ("id" + Math.random()).replaceAll(".", "0");
+            var cpyId = ("id" + Math.random()).replaceAll(".", "0");
+
+            $(this).parent().find("pre").attr("id", preId);
+            var $copy = $("<div title='Copy' data-clipboard-target='#" + preId + "' id='" + cpyId + "' class='input-output-copier'>Copy</div>");
+            $(this).append($copy);
+
+            var clipboard = new Clipboard('#' + cpyId, {
+                text: function (trigger) {
+                    return Codeforces.filterClipboardText(document.querySelector('#' + preId).innerText);
+                }
+            });
+
+            var isInput = $(this).parent().hasClass("input");
+
+            clipboard.on('success', function (e) {
+                if (isInput) {
+                    Codeforces.showMessage("The example input has been copied into the clipboard");
+                } else {
+                    Codeforces.showMessage("The example output has been copied into the clipboard");
+                }
+                e.clearSelection();
+            });
+        });
+
+        $(".test-form-item input").change(function () {
+            addPendingSubmissionMessage($($(this).closest("form")), "You changed the answer, do not forget to submit it if you want to save the changes");
+            var index = $(this).closest(".problemindexholder").attr("problemindex");
+            var test = "";
+            $(this).closest("form input").each(function () {
+                var test_ = $(this).attr("name");
+                if (test_ && test_.substring(0, 4) === "test") {
+                    test = test_;
+                }
+            });
+            if (index.length > 0 && test.length > 0) {
+                var indexTest = index + "::" + test;
+                window.changedTests.add(indexTest);
+            }
+        });
+
+        $(window).on('beforeunload', function () {
+            if (window.changedTests.size > 0) {
+                return 'Dialog text here';
+            }
+        });
+
+        autosize($('.test-explanation textarea'));
+
+    });
+</script>
+        </div>
+        <div style="margin-bottom: 2em;">
+
+
+<div class="problemindexholder" problemindex="B" data-uuid="ps_516f031bd37bd5250a99e4b387059b341d355ae8">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://codeforces.com/group/8uwwWH0E98/contest/298810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">B. Viêm phổi Vũ Hán 5</div><div class="time-limit"><div class="property-title">time limit per test</div>0.75 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>128 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>social-distancing.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>social-distancing.out</div></div><div><p><span class="tex-font-style-it">Viêm phổi Vũ Hán</span> hay <span class="tex-font-style-it">Cúm Trung Quốc</span> là bệnh viêm đường hô hấp cấp do chủng mới của Virus Corona (tổ chức y tế thế giới gọi là SARS-CoV-2) gây ra. Bắt nguồn từ chợ hải sản Hoa Nam&nbsp;— một khu chợ chuyên buôn bán động vật hoang dã tại thành phố Vũ Hán, tỉnh Hồ Bắc, Trung Quốc; dịch đã lan ra hơn <span class="tex-span">200</span> quốc gia và vùng lãnh thổ trên thế giới. Tính đến ngày <span class="tex-span">16 / 08 / 2020</span>, đã có hơn <span class="tex-span">21.8</span> triệu bệnh nhân nhiễm bệnh và <span class="tex-span">770</span> ngàn người tử vong. Hơn <span class="tex-span">14.5</span> triệu người đã khỏi bệnh hoặc hồi phục.</p><p>Để ngăn chặn COVID-19 lây lan trong cộng đồng, <span class="tex-font-style-it">giãn cách xã hội</span> là biện pháp then chốt. Tư tưởng là những người dân hạn chế đi lại, cắt giảm sự tiếp xúc với những người xung quanh, do đó cắt đứt đường lây nhiễm của virus. Trước nguy cơ dịch bệnh quay trở lại Hà Nội, chủ tịch NĐC lên phương án quy hoạch lại thành phố nhằm khoanh vùng dập dịch nhanh chóng và hiệu quả.</p><p>Hiện nay, thành phố có <span class="tex-span"><i>n</i></span> công trình mọc lên ở khắp nơi. Nếu mô tả thành phố trên mặt phẳng tọa độ Descartes, <span class="tex-span"><i>n</i></span> công trình này được đặt tại <span class="tex-span"><i>n</i></span> điểm có tọa độ lần lượt là <span class="tex-span">(<i>x</i><sub class="lower-index">1</sub>, <i>y</i><sub class="lower-index">1</sub>), (<i>x</i><sub class="lower-index">2</sub>, <i>y</i><sub class="lower-index">2</sub>), ..., (<i>x</i><sub class="lower-index"><i>n</i></sub>, <i>y</i><sub class="lower-index"><i>n</i></sub>)</span>. Trong phương án tái quy hoạch thành phố, chủ tịch dự định phá một số công trình đã có để làm đường. Đầu tiên chủ tịch chọn ra số nguyên <span class="tex-span"><i>d</i></span> gọi là kích thước của mỗi khu dân cư. Các con đường sẽ được xây dựng song song với một trong hai trục tọa độ. Sẽ có vô số con đường song song với trục <span class="tex-span"><i>Ox</i></span> được mở sao cho khoảng cách giữa hai con đường liên tiếp nhau luôn là <span class="tex-span"><i>d</i></span>. Tương tự, có vô số con đường song song với trục <span class="tex-span"><i>Oy</i></span> được mở và khoảng cách giữa hai con đường liên tiếp cũng phải là <span class="tex-span"><i>d</i></span>. </p><p>Những con đường được mở sẽ khoanh vùng các khu dân cư thành nhiều khu vực, và khi ghi nhận ca dương tính ở một khu vực nào đó, chỉ cần rà soát và cách ly nơi đó là xong. Kế hoạch có tương lai là vậy, nhưng gặp phải một trở ngại lớn: Tất cả các công trình nằm trên khu vực dự kiến mở đường phải bị phá hủy. Vì vậy, chủ tịch thành phố muốn chọn cách mở đường sao cho số công trình bị phá dỡ là nhỏ nhất.</p></div><div class="input-specification"><div class="section-title">Input</div><p>Dòng đầu tiên chứa hai số nguyên <span class="tex-span"><i>d</i></span> và <span class="tex-span"><i>n</i></span> <span class="tex-span">(1 ≤ <i>d</i> ≤ 1000, 0 ≤ <i>n</i> ≤ 10<sup class="upper-index">5</sup>)</span>&nbsp;— khoảng cách giữa hai con đường song song liên tiếp và số công trình đang có trong thành phố.</p><p><span class="tex-span"><i>n</i></span> dòng tiếp theo, mỗi dòng chứa hai số nguyên <span class="tex-span"><i>x</i><sub class="lower-index"><i>i</i></sub></span> và <span class="tex-span"><i>y</i><sub class="lower-index"><i>i</i></sub></span> <span class="tex-span">( - 10<sup class="upper-index">9</sup> ≤ <i>x</i><sub class="lower-index"><i>i</i></sub>, <i>y</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">9</sup>)</span> thể hiện vị trí của một công trình.</p></div><div class="output-specification"><div class="section-title">Output</div><p>In ra một số nguyên duy nhất là số công trình nhỏ nhất phải bị phá hủy.</p></div><div class="sample-tests"><div class="section-title">Example</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id007288823084071447" id="id0006386672352261757" class="input-output-copier">Copy</div></div><pre id="id007288823084071447">3 10
+2 4
+4 5
+5 2
+5 4
+5 7
+6 2
+7 2
+7 7
+8 2
+8 4
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id0002912910920851175" id="id006477694152721118" class="input-output-copier">Copy</div></div><pre id="id0002912910920851175">1
+</pre></div></div></div><div class="note"><div class="section-title">Note</div><p>Hình vẽ dưới đây mô tả test ví dụ. Các ô vuông được đánh dấu miêu tả các công trình. Các đường in đậm thể hiện các tuyến đường được mở trong phương án cần phá hủy ít công trình nhất.</p><p><img class="tex-graphics" src="./Problems - Codeforces_files/fedb80a6587922f388e1038183743bbaec655b90.png" style="max-width: 100.0%;max-height: 100.0%;"></p></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div style="margin-bottom: 2em;">
+
+
+<div class="problemindexholder" problemindex="C" data-uuid="ps_fe72fe41fee95ff884ff8c17c678e305bb75ffd3">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://codeforces.com/group/8uwwWH0E98/contest/298810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">C. Số cuối cùng</div><div class="time-limit"><div class="property-title">time limit per test</div>0.5 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>128 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>digits.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>digits.out</div></div><div><p>Bạn có ba số nguyên không âm <span class="tex-span">ρ</span>, <span class="tex-span">δ</span> và <span class="tex-span">σ</span>. Bạn viết các số nguyên lần lượt theo thứ tự tăng dần, bắt đầu từ số <span class="tex-span">ρ</span> và số sau bằng số trước cộng thêm <span class="tex-span">δ</span>. Bạn dừng lại ngay lập tức sau khi đã viết ra đủ <span class="tex-span">σ</span> chữ số, kể cả là khi bạn đang viết dở một số nào đó. Hãy tìm ra số cuối cùng bạn viết.</p></div><div class="input-specification"><div class="section-title">Input</div><p>Gồm một dòng duy nhất chứa ba số nguyên <span class="tex-span">ρ</span>, <span class="tex-span">δ</span> và <span class="tex-span">σ</span> <span class="tex-span">(0 ≤ ρ ≤ 10<sup class="upper-index">9</sup>, 1 ≤ δ ≤ 10, 1 ≤ σ ≤ 10<sup class="upper-index">16</sup>)</span>.</p></div><div class="output-specification"><div class="section-title">Output</div><p>In ra một số duy nhất là số cuối cùng bạn sẽ viết.</p></div><div><div class="section-title">Scoring</div><ul> <li> Subtask <span class="tex-span">1</span> (<span class="tex-span">25.2</span> điểm): <span class="tex-span">σ ≤ 10<sup class="upper-index">6</sup></span>. </li><li> Subtask <span class="tex-span">2</span> (<span class="tex-span">19.6</span> điểm): <span class="tex-span">δ = 1</span>. </li><li> Subtask <span class="tex-span">3</span> (<span class="tex-span">19.6</span> điểm): <span class="tex-span">δ = 2</span>. </li><li> Subtask <span class="tex-span">4</span> (<span class="tex-span">35.6</span> điểm): Không có ràng buộc gì thêm. </li></ul></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id006300486344475278" id="id0035514669048290926" class="input-output-copier">Copy</div></div><pre id="id006300486344475278">47 10 7
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id007763778257084724" id="id007782981819847543" class="input-output-copier">Copy</div></div><pre id="id007763778257084724">7
+</pre></div><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id0014601220405745807" id="id008245659104017287" class="input-output-copier">Copy</div></div><pre id="id0014601220405745807">98 1 10
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id0004862832744642853" id="id009461591454804965" class="input-output-copier">Copy</div></div><pre id="id0004862832744642853">101
+</pre></div></div></div><div class="note"><div class="section-title">Note</div><p>Trong ví dụ đầu tiên, bạn định viết ra dãy số <span class="tex-span">47</span>, <span class="tex-span">57</span>, <span class="tex-span">67</span>, <span class="tex-span">77</span> nhưng số <span class="tex-span">77</span> bạn chỉ viết một chữ số <span class="tex-span">7</span> đầu tiên do bạn đã viết đủ <span class="tex-span">7</span> chữ số. Do đó dãy số bạn viết ra là <span class="tex-span">47</span> <span class="tex-span">57</span> <span class="tex-span">67</span> <span class="tex-span">7</span> với số cuối cùng là <span class="tex-span">7</span>.</p><p>Trong ví dụ thứ hai, dãy số bạn viết là <span class="tex-span">98</span> <span class="tex-span">99</span> <span class="tex-span">100</span> <span class="tex-span">101</span>.</p></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div style="margin-bottom: 2em;">
+
+
+<div class="problemindexholder" problemindex="D" data-uuid="ps_461b7bf0fa5e6aa625abab4d93663fc42f98a12a">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://codeforces.com/group/8uwwWH0E98/contest/298810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">D. Vòng trang sức</div><div class="time-limit"><div class="property-title">time limit per test</div>0.5 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>puzzles.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>puzzles.out</div></div><div><p>Bé Hạnh có <span class="tex-span"><i>n</i></span> dây chuyền, mỗi dây chuyền có một số hạt trang sức. Có tất cả <span class="tex-span">26</span> loại hạt trang sức khác nhau. Bé Hạnh muốn làm một chiếc vòng đeo tay từ số đồ trang sức này.</p><p>Để làm chiếc vòng mơ ước, đầu tiên bé Hạnh xếp <span class="tex-span"><i>n</i></span> dây chuyền đã có ra trên một hàng. Sau đó bé Hạnh chọn ra một số (ít nhất một) dây chuyền để làm chiếc vòng của mình. Theo thứ tự từ trái qua phải, bé Hạnh lần lượt đặt những chiếc dây đã chọn lên một vòng tròn theo chiều kim đồng hồ nhưng không làm thay đổi thứ tự của các hạt trang sức trên mỗi dây. Cuối cùng, bé lấy chỉ buộc nối những cặp hạt trang sức cạnh nhau trên những dây chuyền khác nhau để tạo thành chiếc vòng đeo tay. Bé Hạnh muốn chiếc vòng của minh càng to càng tốt (nghĩa là tổng số hạt trang sức trên các dây được chọn là lớn nhất có thể). Ngoài ra, bé Hạnh muốn rằng hai hạt trang sức được buộc chỉ lại với nhau phải thuộc cùng một loại.</p><p>Nói cách khác, ta ký hiệu <span class="tex-span">26</span> loại hạt trang sức bằng các chữ cái in thường từ 'a' tới 'z' và biểu diễn mỗi sợi dây chuyển của bé Hạnh bằng một xâu ký tự, mỗi ký tự thể hiện loại của một hạt trang sức. Gọi <span class="tex-span"><i>s</i><sub class="lower-index">1</sub>, <i>s</i><sub class="lower-index">2</sub>, ..., <i>s</i><sub class="lower-index"><i>n</i></sub></span> là <span class="tex-span"><i>n</i></span> dây chuyền của bé Hạnh được xếp ra theo thứ tự từ trái qua phải và giả sử bé Hạnh chọn ra <span class="tex-span"><i>k</i></span> dây chuyền thứ <span class="tex-span"><i>i</i><sub class="lower-index">1</sub>, <i>i</i><sub class="lower-index">2</sub>, ..., <i>i</i><sub class="lower-index"><i>k</i></sub></span> <span class="tex-span">(1 ≤ <i>i</i><sub class="lower-index">1</sub> &lt; <i>i</i><sub class="lower-index">2</sub> &lt; ... &lt; <i>i</i><sub class="lower-index"><i>k</i></sub> ≤ <i>n</i>)</span> để làm chiếc vòng đeo tay. Khi đó:</p><ul> <li> Ký tự cuối cùng của xâu <span class="tex-span"><i>s</i><sub class="lower-index"><i>i</i><sub class="lower-index">1</sub></sub></span> phải trùng với ký tự đầu tiên của xâu <span class="tex-span"><i>s</i><sub class="lower-index"><i>i</i><sub class="lower-index">2</sub></sub></span>. </li><li> Ký tự cuối cùng của xâu <span class="tex-span"><i>s</i><sub class="lower-index"><i>i</i><sub class="lower-index">2</sub></sub></span> phải trùng với ký tự đầu tiên của xâu <span class="tex-span"><i>s</i><sub class="lower-index"><i>i</i><sub class="lower-index">3</sub></sub></span>. </li><li> <span class="tex-span">...</span> </li><li> Ký tự cuối cùng của xâu <span class="tex-span"><i>s</i><sub class="lower-index"><i>i</i><sub class="lower-index"><i>k</i> - 1</sub></sub></span> phải trùng với ký tự đầu tiên của xâu <span class="tex-span"><i>s</i><sub class="lower-index"><i>i</i><sub class="lower-index"><i>k</i></sub></sub></span>. </li><li> Ký tự cuối cùng của xâu <span class="tex-span"><i>s</i><sub class="lower-index"><i>i</i><sub class="lower-index"><i>k</i></sub></sub></span> phải trùng với ký tự đầu tiên của xâu <span class="tex-span"><i>s</i><sub class="lower-index"><i>i</i><sub class="lower-index">1</sub></sub></span>. </li></ul><p>Chú ý rằng, bé Hạnh không làm thay đổi các hạt trong mỗi sợi dây chuyền cũng như đảo ngược thứ tự của chúng. Bé Hạnh có thể chỉ chọn đúng một sợi dây chuyền, khi đó bé sẽ dùng chỉ buộc hạt đầu tiên và hạt cuối cùng của sợi dây này với nhau, và do đó chúng phải thuộc cùng một loại.</p><p>Hãy giúp bé Hạnh tạo được chiếc vòng từ nhiều hạt trang sức nhất có thể nhé.</p></div><div class="input-specification"><div class="section-title">Input</div><p>Dòng đầu tiên chứa số nguyên <span class="tex-span"><i>n</i></span> <span class="tex-span">(1 ≤ <i>n</i> ≤ 700000)</span>&nbsp;— số sợi dây chuyền bé Hạnh có.</p><p>Dòng thứ hai chứa <span class="tex-span"><i>n</i></span> xâu ký tự mô tả <span class="tex-span"><i>n</i></span> dây chuyền của bé Hạnh theo thứ tự từ trái qua phải. Mỗi xâu ký tự có từ <span class="tex-span">1</span> tới <span class="tex-span">10</span> ký tự latin in thường.</p></div><div class="output-specification"><div class="section-title">Output</div><p>Gồm một số nguyên duy nhất là số hạt trang sức tối đa trên chiếc vòng đeo tay của bé Hạnh. Nếu bé không thể làm được một chiếc vòng như ý, in ra <span class="tex-span">0</span>.</p></div><div><div class="section-title">Scoring</div><ul> <li> Subtask <span class="tex-span">1</span> (<span class="tex-span">25</span> điểm): <span class="tex-span"><i>n</i> ≤ 20</span>. </li><li> Subtask <span class="tex-span">2</span> (<span class="tex-span">25</span> điểm): <span class="tex-span"><i>n</i> ≤ 300</span>. </li><li> Subtask <span class="tex-span">3</span> (<span class="tex-span">25</span> điểm): <span class="tex-span"><i>n</i> ≤ 50000</span>. </li><li> Subtask <span class="tex-span">4</span> (<span class="tex-span">25</span> điểm): <span class="tex-span"><i>n</i> ≤ 700000</span>. </li></ul></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id0018433389880628015" id="id007566689386487531" class="input-output-copier">Copy</div></div><pre id="id0018433389880628015">3
+abc ca cba
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id004680001257422919" id="id0012928206817593235" class="input-output-copier">Copy</div></div><pre id="id004680001257422919">6
+</pre></div><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id0044995250082552607" id="id006624326686100062" class="input-output-copier">Copy</div></div><pre id="id0044995250082552607">4
+chuyen khtn dhkhtn dhqghn
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id00624854477739307" id="id009421084855226232" class="input-output-copier">Copy</div></div><pre id="id00624854477739307">0
+</pre></div><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id0026302649711931303" id="id004169821556511073" class="input-output-copier">Copy</div></div><pre id="id0026302649711931303">3
+gs p vh
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id00858334773367722" id="id001193164212442761" class="input-output-copier">Copy</div></div><pre id="id00858334773367722">1
+</pre></div></div></div><div class="note"><div class="section-title">Note</div><p>Trong ví dụ đầu tiên, bé Hạnh chọn hai sợi dây chuyền thứ nhất ('abc') và sợi dây chuyền thứ hai ('cba') với tổng cộng <span class="tex-span">6</span> hạt trang sức.</p><p>Trong ví dụ thứ hai, bé Hạnh không thể tạo được chiếc vòng đeo tay như ý.</p><p>Trong ví dụ thứ ba, bé Hạnh chỉ có thể chọn sợi dây chuyền thứ hai ('p') với chỉ <span class="tex-span">1</span> hạt trang sức.</p></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div style="margin-bottom: 1em;">
+
+
+<div class="problemindexholder" problemindex="E" data-uuid="ps_d0f9dc57ff84bc0699e906f9ceb469debda655f5">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://codeforces.com/group/8uwwWH0E98/contest/298810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">E. Kẹo</div><div class="time-limit"><div class="property-title">time limit per test</div>0.75 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>candy.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>candy.out</div></div><div><p>Tiểu Ly là cô bé dễ thương, tinh nghịch và rất thích ăn kẹo. Từ ngày cậu bạn Thư rời đi, Tiểu Ly không còn được ai cho kẹo nữa. Sau khi làm quen với GS.PVH, Tiểu Ly biết được ở một vùng đất xa xôi, có một chiếc xe khổng lồ với vô số loại kẹo hấp dẫn (như ảnh bên dưới). Không để hàm răng sún của mình thất nghiệp, Tiểu Ly quyết lên đường tìm kiếm chiếc xe. Để làm được điều đó, Tiểu Ly cần vượt qua mạng lưới giao thông nơi đây.</p><center> <img class="tex-graphics" height="415px" src="./Problems - Codeforces_files/b96b267e71c3ba8700f82ff5693eac005f1e825f.png" style="max-width: 100.0%;max-height: 100.0%;" width="623px"> </center><p>Mạng lưới giao thông của vùng đất gồm <span class="tex-span"><i>N</i></span> giao lộ (đánh số từ <span class="tex-span">1</span> tới <span class="tex-span"><i>N</i></span>) và <span class="tex-span"><i>M</i></span> con đường hai chiều nối giữa chúng, với những độ dài bất kỳ. Mạng lưới này có tính thông suốt, nghĩa là việc di chuyển từ một giao lộ tới mọi giao lộ khác là luôn khả thi. Với mỗi cặp giao lộ (khác nhau), có một tuyến xe bus 2 tầng phục vụ việc di chuyển giữa hai giao lộ này. Các xe bus luôn chọn lộ trình sao cho thời gian di chuyển giữa hai điểm đầu và cuối là nhỏ nhất. Tiểu Ly sẽ đi bằng xe bus để tới được nơi chứa kẹo. Nhưng thật không may, hôm đó dự kiến sẽ có cuộc diễu hành lớn, và có thể khiến cho xe bus không thể đi qua một số con đường. Với tính tò mò, Tiểu Ly tự hỏi: Nếu một con đường nào đó ngăn cản xe bus đi qua, sẽ có bao nhiêu tuyến bị ảnh hưởng. Hay nói cách khác, nếu một con đường bị phá huỷ, sẽ có bao nhiêu cặp giao lộ mà khoảng cách nhỏ nhất giữa chúng tăng lên.</p><p><span class="tex-font-style-bf">Lưu ý</span>: Nếu một con đường khi bị phá đi làm việc di chuyển giữa hai giao lộ trở nên bất khả thi, con đường này cũng được coi là gây ảnh hưởng đến cặp giao lộ đó.</p></div><div class="input-specification"><div class="section-title">Input</div><ul> <li> Dòng đầu tiên chứa hai số nguyên <span class="tex-span"><i>N</i></span> và <span class="tex-span"><i>M</i></span> <span class="tex-span">(1 ≤ <i>N</i> ≤ 500, 1 ≤ <i>M</i> ≤ 10000)</span> — số giao lộ và số con đường. </li><li> <span class="tex-span"><i>M</i></span> dòng tiếp theo, mỗi dòng chứa ba số nguyên <span class="tex-span"><i>u</i>,  <i>v</i>,  <i>c</i></span> <span class="tex-span">(1 ≤ <i>u</i>, <i>v</i> ≤ <i>N</i>, 1 ≤ <i>c</i> ≤ 220797)</span> thể hiện một con đường hai chiều độ dài <span class="tex-span"><i>c</i></span> giữa hai giao lộ <span class="tex-span"><i>u</i></span> và <span class="tex-span"><i>v</i></span>. </li></ul><p><span class="tex-font-style-bf">Chú ý</span>: </p><ul> <li> Trong 20% số test, <span class="tex-span"><i>N</i> ≤ 100, <i>M</i> ≤ 300</span>. </li><li> Trong 40% số test, <span class="tex-span"><i>N</i> ≤ 100, <i>M</i> ≤ 2000</span>. </li></ul></div><div class="output-specification"><div class="section-title">Output</div><p>Ghi ra <span class="tex-span"><i>M</i></span> số nguyên (có giá trị từ <span class="tex-span">0</span> tới <img align="middle" class="tex-formula" src="./Problems - Codeforces_files/ca0f7b6b05b9e74fd6da34bc396013043f21be9c.png" style="max-width: 100.0%;max-height: 100.0%;">), số nguyên thứ <span class="tex-span"><i>i</i></span> thể hiện số cặp giao lộ bị ảnh hưởng bởi con đường thứ <span class="tex-span"><i>i</i></span>. Các con đường được đánh số từ <span class="tex-span">1</span> tới <span class="tex-span"><i>M</i></span> theo thứ tự xuất hiện trong input.</p></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id006793547164889229" id="id007096663745130491" class="input-output-copier">Copy</div></div><pre id="id006793547164889229">4 4
+1 2 1
+2 4 10
+1 3 5
+3 4 7
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id0040341514302548487" id="id005599810321291949" class="input-output-copier">Copy</div></div><pre id="id0040341514302548487">3
+2
+2
+1
+</pre></div><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id00935711864190071" id="id0027871074133438367" class="input-output-copier">Copy</div></div><pre id="id00935711864190071">4 3
+1 2 22
+1 3 7
+1 4 97
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id007333952278947329" id="id005980998752551228" class="input-output-copier">Copy</div></div><pre id="id007333952278947329">3
+3
+3
+</pre></div></div></div><div class="note"><div class="section-title">Note</div><ul><li> Trong ví dụ thứ nhất: <ul> <li> Cạnh <span class="tex-span">(1, 2)</span> bị xoá sẽ làm độ dài đường đi ngắn nhất giữa <span class="tex-span">1</span> và <span class="tex-span">2</span> tăng từ <span class="tex-span">1</span> lên <span class="tex-span">22</span>; đường đi ngắn nhất giữa <span class="tex-span">1</span> và <span class="tex-span">4</span> tăng từ <span class="tex-span">11</span> lên <span class="tex-span">12</span>; đường đi ngắn nhất giữa <span class="tex-span">2</span> và <span class="tex-span">3</span> tăng từ <span class="tex-span">6</span> lên <span class="tex-span">17</span>. </li><li> Cạnh <span class="tex-span">(2, 4)</span> bị xoá sẽ làm tăng độ dài đường đi ngắn nhất giữa <span class="tex-span">1</span> và <span class="tex-span">4</span>; giữa <span class="tex-span">2</span> và <span class="tex-span">4</span>. </li><li> Cạnh <span class="tex-span">(1, 3)</span> bị xoá sẽ làm tăng độ dài đường đi ngắn nhất giữa <span class="tex-span">1</span> và <span class="tex-span">3</span>; giữa <span class="tex-span">2</span> và <span class="tex-span">3</span>. </li><li> Cạnh <span class="tex-span">(3, 4)</span> bị xoá sẽ làm tăng độ dài đường đi ngắn nhất giữa <span class="tex-span">3</span> và <span class="tex-span">4</span>. </li></ul></li><li> Trong ví dụ thứ hai: Cạnh <span class="tex-span">(1, 2)</span> bị xoá khiến cho từ <span class="tex-span">2</span> không thể di chuyển tới <span class="tex-span">1</span>, <span class="tex-span">3</span> và <span class="tex-span">4</span>. Tương tự với hai cạnh còn lại.</li></ul></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+    </div>
+
+    <br style="clear: both;">
+
+    <div id="footer">
+        <div><a href="https://codeforces.com/">Codeforces</a> (c) Copyright 2010-2020 Mike Mirzayanov</div>
+        <div>The only programming contests Web 2.0 platform</div>
+
+    </div>
+
+</div>
+</div>
+    <script type="application/javascript">
+        if ('serviceWorker' in navigator && 'fetch' in window && 'caches' in window) {
+            var parser = new UAParser();
+            var browserName = parser.getBrowser().name;
+            var browserVersion = parser.getBrowser().version;
+
+            var supportedBrowser = false;
+            var supportedBrowsers = {
+                "Chrome": "76",
+                "Firefox": "68",
+                // "Edge": "18",
+                "Safari": "12.1",
+                "Opera": "63",
+                "Yandex": "19.9"
+            };
+
+            for (var name in supportedBrowsers) {
+                if (name === browserName && supportedBrowsers[name] <= browserVersion) {
+                    supportedBrowser = true;
+                }
+            }
+
+            if (supportedBrowser) {
+                navigator.serviceWorker.register('/service-worker-62405.js')
+                    .then(function (registration) {
+                        console.log('Service worker registered');
+                    })
+                    .catch(function (error) {
+                        console.log('Registration failed: ', error);
+                    });
+            } else {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    for (var i = 0; i < registrations.length; i++) {
+                        registrations[i].unregister();
+                    }
+                });
+            }
+        }
+    </script>
+
+
+<div id="datepick-div" style="display: none;"></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: STIXSizeOneSym, sans-serif;"></div></div></body></html>
