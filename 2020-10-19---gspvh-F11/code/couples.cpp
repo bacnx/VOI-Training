@@ -30,19 +30,19 @@ int main() {
 
     int j = 0;
     for (int i = 0; i < (int)belowA.size(); i++) {
+        if (j == (int)aboveB.size()) break;
         if (belowA[i].first > aboveB[j].first) {
             ans.push_back(make_pair(belowA[i].second, aboveB[j].second));
             j++;
         }
-        if (j == (int)aboveB.size()) break;
     }
     j = 0;
     for (int i = 0; i < (int)belowB.size(); i++) {
+        if (j == (int)aboveA.size()) break;
         if (belowB[i].first > aboveA[j].first) {
             ans.push_back(make_pair(aboveA[j].second, belowB[i].second));
             j++;
         }
-        if (j == (int)aboveA.size()) break;
     }
 
     cout << (int)ans.size() << '\n';
