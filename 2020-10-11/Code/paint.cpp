@@ -5,7 +5,7 @@ int n, m;
 int a[2002][2002];
 
 long long sm(int i, int j) {
-    long long ans = 1;
+    long long ans = 0;
     if (a[i][j] > a[i-1][j]) ans += a[i][j] - a[i-1][j];
     if (a[i][j] > a[i+1][j]) ans += a[i][j] - a[i+1][j];
     if (a[i][j] > a[i][j-1]) ans += a[i][j] - a[i][j-1];
@@ -26,6 +26,7 @@ int32_t main() {
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= m; j++) {
             ans += sm(i, j);
+            if (a[i][j]) ans++;
         }
     }
     cout << ans;
