@@ -14,11 +14,11 @@ int32_t main() {
 
     cin >> m >> n;
     for (i = 1; i <= m; i++) {
-        scanf("%d", &a);
+        scanf("%lld", &a);
         psumA[i] = psumA[i-1] + a;
     }
     for (i = 1; i <= n; i++) {
-        scanf("%d", &a);
+        scanf("%lld", &a);
         psumB[i] = psumB[i-1] + a;
     }
 

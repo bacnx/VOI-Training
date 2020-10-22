@@ -5,7 +5,7 @@ int n;
 long long a[1000000], t, s;
 
 int32_t main() {
-    ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+    // ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
     freopen("candy.inp", "r", stdin);
     freopen("candy.out", "w", stdout);
 
@@ -20,7 +20,7 @@ int32_t main() {
 
     s = 0;
     for (int i = 0; i < n; i++) {
-        if (a[i] < t) s += t - a[i];
+        if (a[i] > t) s += a[i] - t;
     }
     cout << s;
 
