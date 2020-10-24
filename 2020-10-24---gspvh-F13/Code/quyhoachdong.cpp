@@ -5,14 +5,11 @@ int main() {
     freopen("quyhoachdong.inp", "r", stdin);
     freopen("quyhoachdong.out", "w", stdout);
 
-    int a[4];
-    while (true) {
-        a[0] = -1;
-        cin >> a[0] >> a[1] >> a[2] >> a[3];
-        if (a[0] == -1) break;  
-        sort(a, a+4);
-        if (a[0] > 0 && a[0] + a[1] + a[2] >= a[3]) cout << "No ";
-        else cout << "Yes ";
+    int a, b, c, m;
+    while (cin >> a >> b >> c >> m) {
+        if (m < 3 || a + b + c < m || min(a, min(b, c)) == 0)
+            cout << "Yes ";
+        else cout << "No ";
     }
 
     return 0;
