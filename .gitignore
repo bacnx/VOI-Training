@@ -1,7 +1,7 @@
 test/
+a.exe
 *.exe
 *.inp
 *.out
 *.ans
 *.
-a.exe
