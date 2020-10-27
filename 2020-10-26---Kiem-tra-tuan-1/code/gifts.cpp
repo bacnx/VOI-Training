@@ -10,6 +10,7 @@ int sumK[1000006];
 int maxLeft[2000006], maxRight[2000006];
 
 int32_t main() {
+    ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
     freopen("gifts.inp", "r", stdin);
     freopen("gifts.out", "w", stdout);
 
