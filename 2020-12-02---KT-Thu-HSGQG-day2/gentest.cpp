@@ -2,19 +2,19 @@
 using namespace std;
 
 #define ll long long
+#define INF 1e18 + 1
 typedef pair<int, int> pii;
-const int INF = 1e9 + 1;
 
 int n, m;
-vector<int> v;
+vector<ll> v;
 
-int pushToList(int x) {
+ll pushToList(ll x) {
     int l = 0, r = (int)v.size() - 1;
-    int res = 0;
+    ll res = 0;
 
     while (l <= r) {
         int mid = (l + r) / 2;
-        int tmp = x + mid;
+        ll tmp = x + mid;
 
         if (tmp > v[mid]) {
             res = tmp;
@@ -29,7 +29,7 @@ int pushToList(int x) {
 ll cntBef(int u) {
     return 1LL * n * (n - 1) / 2
         - 1LL * (n-u) * (n-u-1) / 2;
-}
+}  
 
 void query(ll id) {
     int u, v;
