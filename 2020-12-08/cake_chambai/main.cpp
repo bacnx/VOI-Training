@@ -2,10 +2,10 @@
 using namespace std;
 
 const string _name = "cake";
-const int nTest = 100;
-const int nMax = 500;
-const int mMax = 1e5;
-const int aMax = 1e3;
+const int nTest = 1000;
+const int nMax = 5;
+const int mMax = 15;
+const int aMax = 5;
 
 long long Rand(long long l, long long r) {
     return l + (long long)rand() * (long long)rand() % (r - l + 1);
