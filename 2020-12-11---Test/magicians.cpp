@@ -40,31 +40,26 @@ ll query(int l, int r) {
     ll tmp = 0;
 
     for (int i = l; i <= r; i++) {
-        int typeTmp = -(i - 1);
-        if (tmp <= 0) {
-            typeTmp = -1e9;
-            tmp = a[i];
-        } else tmp += a[i];
+        if (tmp <= 0) tmp = a[i];
+        else tmp += a[i];
 
-        if (f[i-1] > tmp) {
-            f[i] = f[i-1];
-            t[i] = i - 1;
-        } else {
+        if (tmp > f[i - 1]) {
             f[i] = tmp;
-            t[i] = typeTmp;
+            t[i] = 1;
+        } else {
+            f[i] = f[i - 1];
+            t[i] = 0;
         }
     }
 
     int u = r;
-    while (u != 1e9) {
-        if (t[u] < 0 && a[u] != 0) {
+    while (f[u] != 0) {
+        if (t[u] == 1 && a[u] != 0) {
             fw.update(u, a[u], 0);
             a[u] = 0;
         }
-        u = t[u];
-        if (u < 0) u = -u;
+        u--;
     }
-    
     return fw.get(n);
 }
 
