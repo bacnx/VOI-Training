@@ -62,8 +62,10 @@ vector<Edge> e1, e2;
 void kruskal() {
     DisjointSet ds(n);
 
+    // nối các gốc của các cây lại với nhau
     for (int i : shop) ds.merge(0, i);
 
+    // duyệt các cạnh đã sắp xếp, thêm cạnh đang xét vào nếu 2 đỉnh của nó không cùng tplt
     for (Edge &e : e1) if (!ds.isSame(e.u, e.v)) {
         ds.merge(e.u, e.v);
         e.selected = true;
@@ -104,10 +106,12 @@ int main() {
 
     ll res = 0;
     vector<int> resLs1, resLs2;
+    // thêm cạnh vào kết quả nếu cạnh này chưa chọn
     for (Edge e : e1) if (!e.selected) {
         res += e.w;
         resLs1.push_back(e.id);
     }
+    // thêm cạnh vào kết quả nếu cạnh này đã chọn
     for (Edge e : e2) if (e.selected) {
         res += e.w;
         resLs2.push_back(e.id);
