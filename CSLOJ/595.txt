@@ -1,0 +1,10 @@
+- Gọi d[u][t]: chi phí ít nhất khi đi từ đỉnh 1 đến u và đã sử
+ dụng t đường hầm.
+
+- Xét trạng thái (u, t), đường đi (u -> v: w):
+	- d[v][t] = d[u][t] + w; // không sử dụng (u->v) làm đường 
+	 hầm 
+	- d[v][t+1] = d[u][t]; // sử dụng (u->v) làm đường hầm 
+
+- Kết quả là d[n][k].
+- Độ phức tạp: (N * K) * log(N * K)
