@@ -1,0 +1,24 @@
+Bài này sẽ dijkstra 2 chiều
+
+-dp[u][i] lưu trạng thái khi đi đến đỉnh u; i = 0 nếu chưa mua
+i = 1 nếu đã mua, Trạng thái gồm:
+	u: đỉnh đang đứng
+	cost: chi phí để đi đến đây
+	id: chỉ số của đỉnh đã mua xu trong quãng đường từ A -> u 
+	  (id = 0 nếu chưa mua)
+	value: giá của đồng xu mua ở đỉnh id (= 0 nếu chưa mua)
+
+-Lúc này, ta sẽ không coi một đỉnh khi dijkstra là u nữa mà là 
+(u, i) như trạng thái trên. Khi đó ta sẽ có 2 * n đỉnh trong
+dijkstra.
+
+
+Khi xét đến đỉnh (u, i), ta xét tất cả các đường đi (u, v):
+	-Nếu chưa mua xu trước khi đến v (i == 0):
+		-Tiếp tục đi đến đỉnh v và không mua xu ở v. Đỉnh (v, 0)
+		-Nếu ở v có bán xu và mua ở v. (v, 1)
+	-Nếu đã mua xu (i == 1):
+		-Đi đến v và không mua xu ở v. (v, 1)
+		-Nếu có bán và mua ở v. (v, 1)
+
+Kết quả là thông tin được lưu ở đỉnh (B, 1).
