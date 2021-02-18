@@ -7,4 +7,3 @@
 	- d[v][t+1] = d[u][t]; // sử dụng (u->v) làm đường hầm 
 
 - Kết quả là d[n][k].
-- Độ phức tạp: (N * K) * log(N * K)
