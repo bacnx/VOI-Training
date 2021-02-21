@@ -1,0 +1,13 @@
+- Dijkstra 2 lần:
+	- Tính đường đi ngắn nhất từ s tới các đỉnh còn lại.
+	 ds[u]: độ dài đường đi ngắn nhất từ s -> u
+
+	- Tính đường đi ngắn nhất từ các đỉnh khác tới t
+	 (đảo chiều của cạnh ban đầu để làm như bình thường).
+	 dt[u]: độ dài đường đi ngắn nhất từ u -> t
+
+- Giả sử ta chọn cạnh 2 chiều (x, y: q) là cạnh sẽ dựng, chi 
+ phí sẽ là:
+ 	q + min(ds[x] + dt[y], ds[y] + dt[x])
+
+- Kết quả là min của những của các cách chọn trên.
