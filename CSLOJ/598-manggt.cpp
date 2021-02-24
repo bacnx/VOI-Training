@@ -29,41 +29,21 @@ void init() {
 	}
 }
 
-void dijkstraFromS() {
+void dijkstra(int u0, vector<pii> adj[], int d[]) {
 	priority_queue<pii, vector<pii>, greater<pii>> pq;
-	ds[s] = 0;
-	pq.push(pii(0, s));
+	d[u0] = 0;
+	pq.push(pii(0, u0));
 
 	while (!pq.empty()) {
 		pii cur = pq.top(); pq.pop();
 		int u = cur.se;
-		if (cur.fi != ds[u]) continue;
+		if (cur.fi != d[u]) continue;
 
 		for (pii e : adj[u]) {
 			int v = e.fi, w = e.se;
-			if (ds[v] > ds[u] + w) {
-				ds[v] = ds[u] + w;
-				pq.push(pii(ds[v], v));
-			}
-		}
-	}
-}
-
-void dijkstraFromT() {
-	priority_queue<pii, vector<pii>, greater<pii>> pq;
-	dt[t] = 0;
-	pq.push(pii(0, t));
-
-	while (!pq.empty()) {
-		pii cur = pq.top(); pq.pop();
-		int u = cur.se;
-		if (cur.fi != dt[u]) continue;
-
-		for (pii e : reverseAdj[u]) {
-			int v = e.fi, w = e.se;
-			if (dt[v] > dt[u] + w) {
-				dt[v] = dt[u] + w;
-				pq.push(pii(dt[v], v));
+			if (d[v] > d[u] + w) {
+				d[v] = d[u] + w;
+				pq.push(pii(d[v], v));
 			}
 		}
 	}
@@ -82,8 +62,8 @@ int main() {
 	}
 
 	init();
-	dijkstraFromS();
-	dijkstraFromT();
+	dijkstra(s, adj, ds);
+	dijkstra(t, reverseAdj, dt);
 
 	int res = INF;
 	for (Edge e : edges) {
