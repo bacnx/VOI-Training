@@ -1,14 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define int long long
 typedef pair<int, int> pii;
 #define fi first
 #define se second
 
 #define maxN 200005
+#define INF 1e18
 
 int n, m, k;
 vector<pii> rooms;
+bool vjpProRoom[maxN];
 vector<pii> adj[maxN][2];
 
 vector<pii> row[maxN], col[maxN];
@@ -76,7 +79,15 @@ void dijkstra(int u0, int mask) {
 		int cur = pq.top().se, wCur = pq.top().fi; pq.pop();
 		if (wCur != d[cur]) continue;
 		int u = state[cur].fi, mask = state[cur].se;
+		// cout << u << ' ' << mask << ' ' << wCur << '\n';
 
+		if (vjpProRoom[u]) {
+			int newState = id[u][mask^1];
+			if (d[newState] == -1 || d[newState] > d[cur] + 1) {
+				d[newState] = d[cur] + 1;
+				pq.push(pii(d[newState], newState));
+			}
+		}
 
 		for (pii e : adj[u][mask]) {
 			int v = e.fi, w = e.se, newState = id[v][mask];
@@ -85,37 +96,37 @@ void dijkstra(int u0, int mask) {
 				pq.push(pii(d[newState], newState));
 			}
 		}
-		for (pii e : adj[u][mask ^ 1]) {
-			int v = e.fi, w = e.se + 1, newState = id[v][mask ^ 1];
-			if (d[newState] == -1 || d[newState] > d[cur] + w) {
-				d[newState] = d[cur] + w;
-				pq.push(pii(d[newState], newState));
-			}
-		}
 	}
 } 
 
-int main() {
-	freopen("input.txt", "r", stdin);
+int32_t main() {
+	// freopen("input.txt", "r", stdin);
+	freopen("mansion.inp", "r", stdin);
+	freopen("mansion.out", "w", stdout);
 
 	cin >> m >> n >> k;
 	rooms.push_back(pii(1, 1));
 	rooms.push_back(pii(m, n));
 	for (int i = 0; i < k; i++) {
 		int x, y; cin >> x >> y;
-		rooms.push_back(pii(x, y));
+		if (x == 1 && y == 1) vjpProRoom[0] = true;
+		else if (x == m && y == n) vjpProRoom[1] = true;
+		else {
+			rooms.push_back(pii(x, y));
+			vjpProRoom[(int)rooms.size() - 1] = true;
+		}
 	}
 
 	initGraph();
 	initState();
 	dijkstra(0, 0);
 
-	int res = 1e9; {
-		if (d[id[1][0]] != -1 && d[id[1][0]] < res)
-			res = d[id[1][0]];
-		if (d[id[1][1]] != -1 && d[id[1][1]] < res)
-			res = d[id[1][1]];
-		if (res == 1e9) res = -1;
+	int res = INF; {
+		if (d[id[1][0]] != -1)
+			res = min(res, d[id[1][0]]);
+		if (d[id[1][1]] != -1)
+			res = min(res, d[id[1][1]]);
+		if (res == INF) res = -1;
 	}
 	cout << res;
 
