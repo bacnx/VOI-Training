@@ -34,7 +34,7 @@ void dijkstra(int u0) {
     d[u0][0] = 0;
     pq.push(State(u0, 0, 0));
 
-    while (pq.empty()) {
+    while (!pq.empty()) {
         State cur = pq.top(); pq.pop();
         int u = cur.u, w = cur.w, h = cur.h;
         if (w != d[u][h]) continue;
@@ -63,14 +63,13 @@ int main() {
     }
     int a, b; cin >> a >> b;
 
-    // dijkstra(a);
-    // int res = 2e9;
-    // for (int h = 0; h < k; h++) if (d[b][h] != -1) {
-    //     res = min(res, d[b][h]);
-    // }
-    // if (res == 2e9) res = -1;
-    // cout << res;
-    cout << a << ' ' << b;
+    dijkstra(a);
+    int res = 2e9;
+    for (int h = 0; h < k; h++) if (d[b][h] != -1) {
+        res = min(res, d[b][h]);
+    }
+    if (res == 2e9) res = -1;
+    cout << res;
 
     return 0;
 }
